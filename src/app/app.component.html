@@ -1,20 +1,15 @@
-<div class="epibratie">
-  <img src="assets/epibreren.png" class="image">
-  <img src="assets/epibreren-small.png" class="image-small">
-  <p spellcheck="false">We zijn de website voor u aan het epibreren.<br />Even geduld a.u.b.</p>
-  <div class="lds-roller">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="button-group">
-    <a href="https://epibratie.nl/solitaire" class="p-button">solitaire</a>
-    <div></div>
-    <a href="https://epibratie.nl/puzzle" class="p-button">puzzle</a>
-  </div>
+  <p class="welcome-text" spellcheck="false">We zijn de website voor u aan het epibreren.<br />Even geduld a.u.b.<br />
+    <p-button (click)="sidebarVisible = true" icon="pi pi-arrow-right"></p-button>
+  </p>
+  <div class="progress-spinner"><p-progressSpinner animationDuration="4s"></p-progressSpinner></div>
+  <p-sidebar [(visible)]="sidebarVisible">
+    <p>
+    <a href="https://epibratie.nl/solitaire">solitaire</a>
+    <br /><br />
+    <a href="https://epibratie.nl/puzzle">puzzle</a>
+    <br /><br />
+    <a href="https://epibratie.nl/irmpier">irmpier</a>
+    </p>
+  </p-sidebar>
+  <div class="card flex justify-content-center">
 </div>
