@@ -1,16 +1,10 @@
 @import "primeicons/primeicons.css";
 
 body {
-    // background-color: ;
     background: #400040 url(assets/epibreren.png) no-repeat center fixed;
     background-size: contain;
 }
 
-.p-button {
-    background-color: #2c6363;
-    border-color: #2c6363;
-}
-
-.p-progress-spinner-circle {
-    stroke: white !important;
+.p-progressspinner-circle {
+    stroke: white !important;  
 }

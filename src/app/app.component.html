@@ -1,15 +1,59 @@
-  <p class="welcome-text" spellcheck="false">We zijn de website voor u aan het epibreren.<br />Even geduld a.u.b.<br />
-    <p-button (click)="sidebarVisible = true" icon="pi pi-arrow-right"></p-button>
-  </p>
-  <div class="progress-spinner"><p-progressSpinner animationDuration="4s"></p-progressSpinner></div>
-  <p-sidebar [(visible)]="sidebarVisible">
-    <p>
-    <a href="https://epibratie.nl/solitaire">solitaire</a>
-    <br /><br />
-    <a href="https://epibratie.nl/puzzle">puzzle</a>
-    <br /><br />
-    <a href="https://epibratie.nl/irmpier">irmpier</a>
-    </p>
-  </p-sidebar>
-  <div class="card flex justify-content-center">
+<p class="welcome-text" spellcheck="false">
+  We zijn de website voor u aan het epibreren.<br />Even geduld a.u.b.<br />
+  <p-button (click)="menuVisible = true" icon="pi pi-arrow-right"></p-button>
+</p>
+<div class="progress-spinner">
+  <p-progressSpinner animationDuration="4s"></p-progressSpinner>
 </div>
+<p-drawer [(visible)]="menuVisible">
+    <p>
+      <a class="p-button-text p-button-lg" href="https://epibratie.nl/solitaire">solitaire</a>
+      <br /><br />
+      <a class="p-button-text p-button-lg" href="https://epibratie.nl/puzzle">puzzle</a>
+      <br /><br />
+      <a class="p-button-text p-button-lg" href="https://epibratie.nl/irmpier">irmpier</a>
+      <br /><br />
+    </p>
+    <p style="position: fixed; bottom: 0;">
+      <p-button variant="text" size="large" (onClick)="dialogVisible=true">Over</p-button>
+    </p>
+</p-drawer>
+<p-dialog header="Epibratie" [modal]="true" [(visible)]="dialogVisible" [style]="{ width: '50rem' }">
+  <p>Een website ontstaan uit pure verveling in coronatijd.</p>
+  <p>Epibratie is een zelfverzonnen woord, maar gebaseerd op het werkwoord epibreren:</p>
+  <q><cite>
+    <a href="https://nl.wikipedia.org/wiki/Epibreren" target="_blank">Epibreren</a>
+    is een Nederlands werkwoord dat in 1954 gepubliceerd werd door Simon Carmiggelt.
+    De betekenis is het verrichten van niet nader gespecificeerd werk dat heel voornaam lijkt,
+    maar desondanks helemaal niets voorstelt.
+    Degene die het woord gebruikt zegt bijvoorbeeld op een vergadering dat hij een en ander gaat epibreren
+    en vertrouwt erop dat de overige aanwezigen dat voor zoete koek slikken.</cite></q>
+  
+<h3>Spelletjes</h3>
+<ul>
+  <li>
+    <b>Solitaire</b>:
+    Geboren uit het gemis van
+    <a href="https://en.wikipedia.org/wiki/Microsoft_Solitaire" target="_blank">het spel</a> 
+    dat al jaren niet meer standaard op Windows is geinstalleerd
+    en omdat je toch iets te doen moet hebben in de trein als je geen internet hebt.
+  </li>
+  <li>
+    <b>Puzzle</b>:
+    Work in progress (inclusief naam) - het idee kwam tijdens het spelen van het spel
+    <a href="https://www.999games.nl/product/patchwork/8717249200291" target="_blank">Patchwork</a>
+    waar je ook een soort
+    <a href="https://nl.wikipedia.org/wiki/Tetris" target="_blank">Tetris</a> van kunt maken.
+  </li>
+  <li>
+    <b>Irmpier</b>:
+    Een verzoek van vrienden, gebaseerd op het spel
+    <a href="https://en.wikipedia.org/wiki/Snake_(1998_video_game)" target="_blank">Snake</a> en Irma natuurlijk!
+  </li>
+</ul>
+<p>
+  <a class="p-button-text p-button-lg" href="https://github.com/marloustolk" target="_blank">
+    <i class="pi pi-github"></i><small> Marlou Stolk</small>
+  </a>
+</p>
+</p-dialog>
